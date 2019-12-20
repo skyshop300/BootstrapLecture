@@ -1,120 +1,1161 @@
+<!-- 
+먼저 프론트 개발을 시작하기 전에 프론트 코딩에 좋은 텍스트 에디터를 설치해봅시다.
+Microsoft 비쥬얼 스튜디오 코드
+기존 아톰을 사용하였으나 속도 및 성능에서 절대 우위에 있어 바꿨다
+스택오버플로우 개발환경 인기 투표에서 1위
+
+Visual Studio Code
+Visual Studio
+Notepad++
+Sublime Text
+아톰에 비해 가볍고
+강력한 플러그인과  많이 있다. -->
+
+<!--********** 폴더 디렉토리 생성 **********-->
+<!-- css폴더, img폴더 생성 -->
+<!-- index.html 파일 생성 -->
+
+<!--********** 플러그인 **********-->
+<!-- 1. korean 
+    ctrl shift p    
+    config -> ko
+-->
+
+<!-- 받은 폴더를 디렉토리에 넣어준다. -->
+
+<!--***** 주요 기본 기능 *****-->
+<!-- 
+    1. emmet: 코드를 쉽고 빠르게 입력하도록 하는 플러그인, 인쇄물 보시면 emmet 사용법 
+        div>div>ul>li 
+        div.hello * 5 
+        div.row*2>div.col-md-4*3   
+        ! + Tab 
+
+    2. minimap: 좌측과 같이 코드를 동일 색상의 라인으로 표현하여 직관적으로 원하는 코드를 찾을 수 있도록 합니다.
+
+    3. 그외에도 코딩에 필요한 다양한 기능을 제공
+-->
+
+
+
+<!--***** html5 명시 *****-->
+<!-- doc + tab 문서의 기본골격이 생성 -->
+<!-- or html:5 + tab or doc + tab -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<!-- meta viewport 태그는 애플이 아이폰, 아이패드 등 자사의 모바일 브라우저의
+	뷰포트(viewport) 크기 조절을 위해 만들었습니다 반응형 웹을 구현하기 위한 코드-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Bootsrap CDN -->
+	<!-- Contents Delivery Network: 지리적 물리적으로 떨어져 있는 사용자에게 컨텐츠 제공자의 컨텐츠를 더 빠르게 제공할 수 있는 네트워크 기술 -->
+	<!-- 링크를 통해 서버로 부터 파일을 받아오는 cdn 방식으로 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- NOTO SANS -->
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css"
+		integrity="sha384-zGzb8nSrN9lm5PPcfztVC5DjjTs5sVStV85IH8x51fM9yIwmI+Uvh3RZDJlrpPWQ" crossorigin="anonymous">
+	<!-- custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- fontawesome -->
+	<script src="https://kit.fontawesome.com/ab7b6cdcf0.js" crossorigin="anonymous"></script>
+	<title>처음으로 만드는 부트스트랩 페이지</title>
+	<!-- @@@@@@@@ -->
 </head>
-<body>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-                featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </div>
-    </div>
-    
-    <!-- JUMBOTRON -->
-    <div class="jumbotron jumbotron-fluid bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 align-self-center mb-4  px-5">
-                    <h1 class="display-2 text-white">Hello Bootstrap!</h1>
-                    <p class="h5 text-secondary">GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside 40 million developers..</p>
-                </div>
-                <div class="col-md-5 ">
-                    <!-- form-group: form간의 여백을 제공 -->
-                    <form class="jumbotron bg-light text-md mb-0" action="">
-                        <div class="form-group">
-                            <label for="pwd">Username</label>
-                            <input type="text" class="form-control" id="pwd" placeholder="비밀번호를 입력해주세요.">
-                        </div>
-                        <div class="form-group">
-                            <!-- for 속성을 이용하여 클릭 input과의 관계를 브라우저에게 나타낸다.. 클릭 범위 증가 -->
-                            <!-- form-control: 좌우 width:100% 설정 -->
-                            <label for="usr">Email</label>
-                            <input type="email" class="form-control" id="usr" placeholder="example@bootstrap.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력해주세요.">
-                        </div>
-                        <div class="form-group custom-control custom-checkbox">
-                            <!-- /// value: 서버로 전송되는 데이터 값 -->
-                            <input class="custom-control-input" id="check0" type="checkbox" value="">
-                            <label class="custom-control-label" for="check0">
-                                자동 로그인
-                            </label>
-                        </div>
-                        <!-- <button type="submit" class="btn btn-primary btn-lg float-right"><i class="far fa-paper-plane"></i>제출하기</button> -->
-                        <button type="submit" class="btn btn-success btn-block btn-lg"><i class="far fa-paper-plane"></i>Sign up for Bootstrap</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container round-2 shadow my-5 p-5">
-        <div class="row">
-            <div class="col-xl-4">
-                <h2>Get started with GitHub Enterprise</h2>
-                <p>Take collaboration to the next level with security and administrative features built for teams.</p>
-            </div>
-            <div class="col-xl-8 row text-center">
-                <div class="col-md-4">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
-                        <path
-                            d="M22 10h-1v-2h-11v13h5v1.617c0 .524.121 1.058.502 1.383h-5.002c-.398 0-.779-.158-1.061-.439-.281-.282-.439-.663-.439-1.061v-15c0-.398.158-.779.439-1.061.282-.281.663-.439 1.061-.439h10c.398 0 .779.158 1.061.439.281.282.439.663.439 1.061v2.5zm2 2.25c0-.69-.56-1.25-1.25-1.25h-5.5c-.69 0-1.25.56-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h5.5c.69 0 1.25-.56 1.25-1.25v-10.5zm-15.407 11.75h-6.593l2.599-3h3.401v1.804c0 .579.337 1.09.593 1.196zm11.407-1c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm3-3v-6.024h-6v6.024h6zm-2-15h-2v-3h-17v15h6v2h-8v-19h21v5zm-.5 7h-1c-.276 0-.5.224-.5.5s.224.5.5.5h1c.275 0 .5-.224.5-.5s-.225-.5-.5-.5z" />
-                    </svg>
-                    <h3 class="h5">Enterprise Cloud</h3>
-                    <p>Leave the hosting to us.</p>
-                    <button class="btn btn-primary btn-block ">Try Cloud for free</button>
-                </div>
-                <div class="col-md-4">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
-                        <path
-                            d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z" />
-                    </svg>
-                    <h3 class="h5">Enterprise Cloud</h3>
-                    <p>Leave the hosting to us.</p>
-                    <button class="btn btn-primary btn-block">Try Cloud for free</button>
-                </div>
-                <div class="col-md-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M10 3.002c4.411 0 8 2.849 8 6.35 0 3.035-3.029 6.311-7.925 6.311-1.58 0-2.718-.317-3.718-.561-.966.593-1.256.813-3.006 1.373.415-1.518.362-2.182.331-3.184-.837-1.001-1.682-2.069-1.682-3.939 0-3.501 3.589-6.35 8-6.35zm0-2.002c-5.281 0-10 3.526-10 8.352 0 1.711.615 3.391 1.705 4.695.047 1.527-.851 3.718-1.661 5.312 2.168-.391 5.252-1.258 6.649-2.115 1.181.289 2.312.421 3.382.421 5.903 0 9.925-4.038 9.925-8.313 0-4.852-4.751-8.352-10-8.352zm11.535 11.174c-.161.488-.361.961-.601 1.416 1.677 1.262 2.257 3.226.464 5.365-.021.745-.049 1.049.138 1.865-.892-.307-.979-.392-1.665-.813-2.127.519-4.265.696-6.089-.855-.562.159-1.145.278-1.74.364 1.513 1.877 4.298 2.897 7.577 2.1.914.561 2.933 1.127 4.352 1.385-.53-1.045-1.117-2.479-1.088-3.479 1.755-2.098 1.543-5.436-1.348-7.348zm-15.035-3.763c-.591 0-1.071.479-1.071 1.071s.48 1.071 1.071 1.071 1.071-.479 1.071-1.071-.48-1.071-1.071-1.071zm3.5 0c-.591 0-1.071.479-1.071 1.071s.48 1.071 1.071 1.071 1.071-.479 1.071-1.071-.48-1.071-1.071-1.071zm3.5 0c-.591 0-1.071.479-1.071 1.071s.48 1.071 1.071 1.071 1.071-.479 1.071-1.071-.48-1.071-1.071-1.071z" />
-                    </svg>
-                    <h3 class="h5">Enterprise Cloud</h3>
-                    <p>Leave the hosting to us.</p>
-                    <button class="btn btn-outline-primary btn-block">Try Cloud for free</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<body class="noto">
+<header>
+<!-- fixed-top, sticky-top -->
+<nav class="navbar navbar-expand-md bg-black navbar-dark fixed-top">
+	<div class="container">
+		<!--********** 1. 브랜드 로고 **********-->
+		<a href="http://playdata.io" class="navbar-brand">
+			<img src="img/bootstrap-punchout.svg" alt="Bootstrap" width="40" height="40">
+		</a>
+
+		<!-- 2. 햄버거 버튼  -->
+		<!-- d-md-none: 사라짐 -->
+		<button type="button" class="btn d-md-none btn-outline-light ml-auto mr-2" type="submit">Sign up</button>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar-md">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- 모바일 환경 적용 옵션 -->
+		<!-- 특정 px 미만 일 시에 본 태그 안의 내용이 모바일 형태의 레이아웃으로 변경됨 -->
+		<!-- .collapse:			페이지 시작시 본 요소를 닫힌 상태로 유지 -->
+		<!-- .navbar-collapse:	navbar에 맞게 본 요소 표시-->
+		<!--********** 3. 메뉴 모음 **********-->
+		<div class="collapse navbar-collapse" id="myNavbar-md">
+
+			<!-- ul.navbar-nav: 색상 -->
+			<!-- a.nav-link: 링크의 상하 깔끔 배치 -->
+			<!-- 좌측 정렬 없음 -->
+			<!-- mr-auto 우측 끝으로 밀어버림 -->
+			<!--********** 메뉴 목록 **********-->
+			<ul class="navbar-nav  mr-auto" id="top_navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" 
+						aria-haspopup="true" aria-expanded="false">
+						Why Bootstrap?
+					</a>
+					<div class="dropdown-menu" aria-labelleby="navbarDropdown1">
+						<a class="dropdown-item" href="" class="dropdown-menu">feature</a>
+						<a class="dropdown-item" href="" class="dropdown-menu">code review</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="" class="dropdown-menu">Project management</a>
+					</div>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="#">Enterprise</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" 
+						aria-haspopup="true" aria-expanded="false">
+						Explore
+					</a>
+					<div class="dropdown-menu" aria-labelleby="navbarDropdown1">
+						<a class="dropdown-item" href="" class="dropdown-menu">feature</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="" class="dropdown-menu">code review</a>
+						<a class="dropdown-item" href="" class="dropdown-menu">topics</a>
+						<a class="dropdown-item" href="" class="dropdown-menu">code review</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="" class="dropdown-menu">Project management</a>
+					</div>
+				</li>
+			</ul>
+
+			<!-- 검색 버튼 -->
+			<!-- controller에 mapping되어 있는 url의 메소드로 전송 -->
+			<!-- @RequestMapping(value="/search/search", method=RequestMethod.GET) -->
+			<!-- action:	폼 내부에 데이터를 보내는 목적지 URL 지정 -->
+			<!-- method:	폼을 서버로 전송하는 http 방식 // POST/GET 방식 -->
+			<!-- 스프링MVC가 파라미터를 통해 VO객체를 선언함으로써 자동으로 파라미터를 수집할 때 폼 데이터의 경우 
+			            input태그나 textarea태그의 name속성과, 선언된 VO클래스의 멤버변수 이름이 같아야 바인딩 시켜준다. 
+			            따라서 form 태그를 작성할 때 "name" 속성을 줘도 되고 안줘도 되는게 아니라 바인딩하고자하는 VO클래스의 멤버변수와 
+			            똑같은 이름으로 속성을 부여해야만 한다.
+			        -->
+			<form action="/search" method="get" class="form-inline">
+				<input class="form-control bg-dark text-light border-0 " type="search" placeholder="Search Bootstrap">
+			</form>
+			<a href="" class="btn text-light " >Sign in</a>
+			<a href="" class="btn btn-outline-light" >Sign up</a>
+		</div>
+		
+	</div>
+</nav>
+</header>
+
+<main>
+<!-- JUMBOTRON -->
+<!-- 점보트론은 어떤 특정 컨텐츠나 정보를 두르러지게 하기위한 큰 박스를 말한다. -->
+<div class="jumbotron jumbotron-fluid bg-dark mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 align-self-center text-light mb-4 px-5">
+				<h1 class="display-2 text-white mb-3">Hello Bootstrap!</h1>
+				<p class="h5 font-weight-light">부트스트랩이란 프론트엔드 개발을 더 쉽고 빠르게 하는 웹 디자인 프레임워크이자 라이브러리입니다. 이번 시간을 통해 실전에서 바로 사용할 수 있는 Bootstrap 핵심기능을 만들어봅시다!</p>
+			</div>
+			<div class="col-md-5 ">
+				<!-- form-group: form간의 여백을 제공 -->
+				<form class="p-5 rounded bg-light text-md mb-0 d-none d-md-block" action="">
+					<div class="form-group">
+						<label class="h6" for="pwd">Username</label>
+						<input type="text" class="form-control" id="pwd" placeholder="비밀번호를 입력해주세요.">
+					</div>
+					<div class="form-group">
+						<!-- for 속성을 이용하여 클릭 input과의 관계를 브라우저에게 나타낸다.. 클릭 범위 증가 -->
+						<!-- form-control: 좌우 width:100% 설정 -->
+						<label class="h6" for="usr">Email</label>
+						<input type="email" class="form-control" name="id" id="usr" placeholder="example@bootstrap.com">
+					</div>
+					<div class="form-group">
+						<label class="h6" for="pwd">Password</label>
+						<input type="password" class="form-control" name="pwd" id="pwd" placeholder="비밀번호를 입력해주세요.">
+					</div>
+					<div class="form-group custom-control custom-checkbox">
+						<!-- name: 서버단에서 받는 변수명 -->
+						<!-- value: 서버로 전송되는 데이터 값 -->
+						<input class="custom-control-input" id="check0" type="checkbox" value="">
+						<label class="custom-control-label" for="check0">
+							자동 로그인
+						</label>
+					</div>
+
+					<!-- [TIP]: <input type="submit"> VS <button> -->
+					<!-- 기능적으로 동일, 기본적으로 button요소는 type속성을 명시하지 않으면 submit 기능 수행 -->
+					<!-- input태그는 디자인 커스터마이징이 힘드므로 -->
+					<!-- button태그는 태그 안에 이미지 삽입 가능 HTML5로 넘어오며 button을 사용하는 추세 -->
+					<!-- button태그 type:"submit": 폼의 전송 기능 -->
+					<!-- button태그 type:"reset": 폼의 작성 내용 초기화 -->
+					<!-- button태그 type:"button": 기능구현에 활용, js를 이용한 기능 구현에 많이 사용 -->
+					<!-- <button type="submit" class="btn btn-primary btn-lg float-right"><i class="far fa-paper-plane"></i>제출하기</button> -->
+					<button type="submit" class="btn btn-success btn-block btn-lg">Sign up for Bootstrap</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="py-3">
+	<div class="container rounded shadow p-5">
+		<div class="row">
+			<div class="col-xl-4">
+				<h2>Get started with Bootstrap</h2>
+				<p>Bootstrap으로 프론트엔드를 빠르게 개발하여, 최종 프로젝트를 성공적으로 마칠 수 있습니다.</p>
+			</div>
+			<div class="col-xl-8 row text-center">
+				<div class="col-md-4 mb-5 mb-md-0">
+					<i class="text-primary display-4 fas fa-code"></i>
+					<h3 class="h5">Enterprise Cloud</h3>
+					<p>Leave the hosting to us.</p>
+					<button class="btn btn-primary ">Try Cloud for free</button>
+				</div>
+				<div class="col-md-4 mb-5 mb-md-0">
+					<i class="text-primary display-4 fas fa-mobile-alt"></i>
+					<h3 class="h5">Enterprise Cloud</h3>
+					<p>Leave the hosting to us.</p>
+					<button class="btn btn-primary ">Try Cloud for free</button>
+				</div>
+				<div class="col-md-4 mb-5 mb-md-0">
+					<i class="text-primary display-4 far fa-comments"></i>
+					<h3 class="h5">Enterprise Cloud</h3>
+					<p>Leave the hosting to us.</p>
+					<button class="btn btn-outline-primary">Try Cloud for free<i class="ml-1 fas fa-long-arrow-alt-right"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="py-3">
+	<div class="container bg-dark rounded shadow p-5 text-center text-md-left text-white">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>See what launched at Universe</h2>
+				<p>Say hello to our new GitHub for mobile experience, get more from GitHub Actions and Packages, and learn how we’re
+				shaping the future of software, together.</p>
+			</div>
+			<!-- align-self-center: 세로 중앙정렬 -->
+			<!-- text-md-right: md 사이즈 이상일 때 우측정렬 -->
+			<div class="col-md-6 text-center text-md-right align-self-center">
+				<button class="btn btn-primary btn-lg">
+					Explore the launches
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="py-5">
+	<div class="container">
+		<div class="text-center my-5">
+			<h2 class="h5">Bootstrap for teams</h2>
+			<h1>A better way to work together</h1>
+			<p>Bootstrap은 누구나 쉽게 배울 수 있고 다양한 기능을 제공하여, 우리의 팀 프로젝트를 성공으로 이끌 것입니다.</p>
+			<button class="btn btn-outline-primary btn-lg">Sign up your team</button>
+		</div>
+		
+		<div class="row mb-5">
+			<!-- align-self-center: 세로 중앙정렬 -->
+			<div class="col-md-6 align-self-center">
+				<img class="img-fluid p-4" src="img/boot.png" alt="">
+			</div>
+			<div class="col-md-6 align-self-center">
+				<div class="list-group">
+					<a href="#" class="list-group-item list-group-item-action  ">
+						<h5 class="mb-1">Write better code</h5>
+						<p class="mb-1">Collaboration makes perfect. The conversations and code reviews that happen in pull requests help your team share the
+						weight of your work and improve the software you build. Learn about code review.</p>
+					</a>
+					<a href="#" class="list-group-item list-group-item-action">
+						<h5 class="mb-1">List group item heading</h5>
+						<p class="mb-1">Take a deep breath. On GitHub, project management happens in issues and project boards, right alongside your code. All
+						you have to do is mention a teammate to get them involved. Learn about project management.</p>
+					</a>
+					<a href="#" class="list-group-item list-group-item-action">
+						<h5 class="mb-1">List group item heading</h5>
+						<p class="mb-1">Browse and buy apps from GitHub Marketplace with your GitHub account. Find the tools you like or discover new
+						favorites—then start using them in minutes. Learn about integrations.</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="py-5">
+			<h3 class="h5 text-secondary text-center">See how the world's leading companies use Bootstrap.</h3>
+			<!-- Card -->
+			<!-- Card -->
+			<!-- 
+						카드형 UI는 모바일과 데스크탑의 모든 환경에 최적화 된 UI 패턴입니다.
+						또한 디자인적으로도 심플하며 아름답기 때문에 최근 많은 웹사이트에서 사용되고 있습니다.
+						부트스트랩4 버전에서 부터 카드 요소가 추가되어 쉽게 구현할 수 있게 되었다.
+						playdata의 본 섹션도 카드 UI 방식으로 채용하였다.
+					-->
+			<!-- 응용 -->
+			<div class="card-deck">
+
+				<!-- p-0: 이미지, 레이아웃 pading 0 -->
+				<a href="#" class="col-md-6 card border-0 shadow btn p-0 text-left ">
+					<!-- <a href="" class=""> -->
+						<img class="card-img-top" src="img/card1.png" alt="left">
+						<div class="card-body">
+							<h4 class="card-title">반응형</h4>
+							<p class="card-text">Responsive Web
+							</p>
+						</div>
+						<div class="card-footer bg-transparent">
+							<span class="text-primary">Read more</span>
+						</div>
+					<!-- </a> -->
+				</a>
+				<a href="#" class="col-md-6 card border-0 shadow  btn p-0 text-left ">
+					<img class="card-img-top" src="img/card2.png" alt="right">
+					<div class="card-body">
+						<h4 class="card-title">쉬운 코딩</h3>
+						<p class="card-text">Easy coding
+						</p>
+					</div>
+					<div class="card-footer bg-transparent">
+						<span class="text-primary">Read more</span>
+					</div>
+				</a>
+				<a href="#" class="col-md-6 card border-0 shadow btn p-0 text-left ">
+					<img class="card-img-top" src="img/card3.png" alt="right">
+					<div class="card-body">
+						<h4 class="card-title">그리드시스템</h4>
+						<p class="card-text">Grid System
+						</p>
+					</div>
+					<div class="card-footer bg-transparent">
+						<span class="text-primary">Read more</span>
+					</div>
+				</a>
+				<a href="#" class="col-md-6 card border-0 shadow btn p-0 text-left ">
+					<img class="card-img-top" src="img/card4.jpg" alt="right">
+					<div class="card-body">
+						<h4 class="card-title">재미</h4>
+						<p class="card-text">Fun
+						</p>
+					</div>
+					<div class="card-footer bg-transparent">
+						<span class="text-primary">Read more</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- @@@@@@@@@@@@@@@ -->
+<!-- font적용부터 -->
+<!-- container 맨 바깥의 섹션을 나누는 기준입니다. 컨텐츠를 감싸는 레이아웃, 
+		    그릇이라고 생각하시면 됩니다.
+		<!--************- Container ************--->
+	<!--************- Container ************--->
+	<!-- 부트스트랩 container 속성에는 2개가 존재 -->
+	<!-- Container와 Container-fluid의 차이점 -->
+	<!-- Container:         pc 환경에서 최대 너비 1140px를 차지 -->
+	<!-- container:         표현하고자 하는 요소들을 브라우저 중앙에 배치
+		    <!-- naver.com -->
+	<!-- 사용자의 시선이 분산되지 않도록한다.  -->
+	<!-- Container-fluid:   브라우저 가로 너비를 꽉차게 차지. -->
+	<!-- 목적에 맞는 container를 선택해서 사용바랍니다. -->
+	<div class="py-5 text-white bg-dark">
+		<div class="text-center text-white mb-4">
+			<h2 class="h5 text-secondary">Container</h2>
+			<h1 id="grid_system">컨텐츠를 담는 그릇 컨테이너</h1>
+			<p class="col-md-7 m-auto">Container는 맨 바깥의 섹션을 나누는 기준입니다.
+				컨텐츠를 감싸는 레이아웃, 그릇이라고 생각하시면 됩니다.</p>
+		</div>
+		<div class="container bg-danger text-center">
+			<h1>내가 만드는 첫번째 부트스트랩 페이지</h1>
+			<h2>container</h2>
+			<p>최대 너비 1140px을 차지합니다.</p>
+		</div>
+		<!-- 최대 너비: 최신 사이트 -->
+		<div class="container-fluid bg-primary">
+			<h1>내가 만드는 첫번째 부트스트랩 페이지</h1>
+			<h2>container-fluid</h2>
+			<p>브라우저 사이즈에 맞게 유동적으로 너비가 변합니다.</p>
+		</div>
+	
+		<div class="bg-warning">
+			<h1>내가 만드는 첫번째 부트스트랩 페이지</h1>
+			<h2>일반 div</h2>
+			<p>일반 div</p>
+		</div>
+	</div>
+
+<!-- 다양한 색상디자인 -->
+<!-- 다양한 색상디자인 -->
+<!-- 다양한 색상디자인 -->
+<div class="py-5">
+	<div class="container text-center ">
+		<div class="text-center text-dark mb-4">
+			<h2 class="h5 text-secondary">Color</h2>
+			<h1>다양한 색상디자인</h1>
+			<p>Bootstrap은 다양한 색상디자인을 제공합니다.</p>
+		</div>
+		<div class="mb-3">
+			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-success">Success</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-warning">Warning</button>
+			<button type="button" class="btn btn-danger">Danger</button>
+			<button type="button" class="btn btn-light">Light</button>
+			<button type="button" class="btn btn-secondary">Secondary</button>
+			<button type="button" class="btn btn-dark">Dark</button>
+			<button type="button" class="btn btn-link">Link</button>
+		</div>
+		<!-- 지우기 -->
+		<!-- bg: background -->
+		<p class="bg-primary text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-success text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-info text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-danger text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-warning text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-light text-dark">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-secondary text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+		<p class="bg-dark text-light">부트스트랩은 다양한 색상을 지원합니다.</p>
+	</div>
+</div>
+
+<!-- 쉬운 margin, padding 컨트롤 -->
+<!-- 쉬운 margin, padding 컨트롤 -->
+<!-- 쉬운 margin, padding 컨트롤 -->
+<div class="py-5">
+	<div class="container text-center">
+		<div class="text-center text-dark mb-4">
+			<h3 class="h5 text-secondary">Spacing</h3>
+			<h1>쉬운 margin, padding 컨트롤</h2>
+			<p>Bootstrap은 css의 margin, padding 속성 없이 레이아웃을 컨트롤할 수 있습니다.</p>
+		</div>
+
+		<div class="bg-dark p-1 mb-3">
+			<div class="bg-secondary text-light m-5 p-5 border border-warning">
+				<h5>margin, padding이란?</h5>
+				margin: 바깥쪽 여백<br>
+				padding:안쪽 여백을 의미합니다.
+			</div>
+		</div>
+		<!-- m, p -->
+		<!-- x, y, t,r,b,l -->
+		<!-- sm, md, lg, xl -->
+		<div class="bg-dark text-light">m-0</div>
+		<div class="bg-dark text-light m-1">m-1</div>
+		<div class="bg-dark text-light m-2">m-2</div>
+		<div class="bg-dark text-light m-3">m-3</div>
+		<div class="bg-dark text-light m-4">m-4</div>
+		<div class="bg-dark text-light m-5">m-5</div>
+		<div class="bg-primary text-light mb-3">p-0</div>
+		<div class="bg-primary text-light p-1 mb-3">p-1 </div>
+		<div class="bg-primary text-light p-2 mb-3">p-2 </div>
+		<div class="bg-primary text-light p-3 mb-3">p-3 </div>
+		<div class="bg-primary text-light p-4 mb-3">p-4 </div>
+		<div class="bg-primary text-light p-5 mb-3">p-5 </div>
+	</div>
+</div>
+
+
+
+
+
+<div class="py-5 bg-dark">
+	<!--****** Grid System ******-->
+	<!-- 부트스트랩의 반응형 웹 부트스트랩의 핵심 기능 -->
+	
+	<!-- css로 width 주는것과 차이점?: 복잡한 미디어 쿼리 코드 없이 반응형이 적용된다. -->
+	<!-- 컬럼 옵션은 다음과 같은 width가 되었을때에 레이아웃이 붕괴되며 하나의 줄을 100% 차지한다. -->
+	<!-- 부트스트랩의 웹페이 제작은 스마트폰 기준 -->
+	<!-- col-xl- : PC 기준          1200px 이상에 적용  extra large-->
+	<!-- col-lg- : 작은 랩탑 기준    992px 이상에 적용  large-->
+	<!-- col-md- : 타블렛 기준       767px 이상에 적용  medium-->
+	<!-- col-sm- : 타블렛 기준       576px 이상에 적용  small-->
+	<!-- col- : 스마트폰 기준     변형 X -->
+	<div class="container text-white ">
+		<div class="text-center text-white mb-4">
+			<h2 class="h5 text-secondary">Grid System</h2>
+			<h1 id="grid_system">쉽고 강력한 그리드 시스템</h1>
+			<p class="col-md-7 m-auto">Grid는 레이아웃은 깔끔하고 멋진 디자인을 위한 뼈대이자 완성.
+			Bootstrap은그리드시스템을 이용하여 레이아웃을 코드 몇 줄로 쉽게 해결.
+			자동 모바일 최적화</p>
+		</div>
+		<div class="row">
+			<div class="col-md-12 bg-danger border border-dark">
+				<h1>col-md-12</h1>
+				<p>col-md-12</p>
+			</div>
+			<div class="col-md-12 bg-danger border border-dark">
+				<h1>col-md-12</h1>
+				<p>col-md-12</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 bg-danger border border-dark">
+				<h1>col-md-6</h1>
+				<p>col-md-6</p>
+			</div>
+			<div class="col-md-6 bg-danger border border-dark">
+				<h1>col-md-6</h1>
+				<p>col-md-6</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4 bg-warning border border-dark">
+				<h1>col-md-4</h1>
+				<p>col-md-4</p>
+			</div>
+			<div class="col-md-4 bg-warning border border-dark">
+				<h1>col-md-4</h1>
+				<p>col-md-4</p>
+			</div>
+			<div class="col-md-4 bg-warning border border-dark">
+				<h1>col-md-4</h1>
+				<p>col-md-4</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3 bg-success border border-dark">
+				<h1>col-md-3</h1>
+				<p>col-md-3</p>
+			</div>
+			<div class="col-md-3 bg-success border border-dark">
+				<h1>col-md-3</h1>
+				<p>col-md-3</p>
+			</div>
+			<div class="col-md-3 bg-success border border-dark">
+				<h1>col-md-3</h1>
+				<p>col-md-3</p>
+			</div>
+			<div class="col-md-3 bg-success border border-dark">
+				<h1>col-md-3</h1>
+				<p>col-md-3</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h1>col-md-2</h1>
+				<p>col-md-2</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+			<div class="col-md-1 bg-primary border border-dark">
+				<h1>col-md-1</h1>
+				<p>col-md-1</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+			<div class="col bg-info border border-dark">
+				<h1>col</h1>
+				<p>col</p>
+			</div>
+		</div>
+
+		<h1>Grid System 응용</h1>
+		<div class="row">
+			<div class="col-md-8 bg-danger border border-dark">
+				<h3>col-md-8</h3>
+				<p>col-md-8</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h3>col-md-2</h3>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-2 bg-info border border-dark">
+				<h3>col-md-2</h3>
+				<p>col-md-2</p>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-2 bg-info border border-dark">
+				<h3>col-md-2</h3>
+				<p>col-md-2</p>
+			</div>
+			<div class="col-md-7 bg-danger border border-dark">
+				<h3>col-md-7</h3>
+				<p>col-md-7</p>
+			</div>
+			<div class="col-md-3 bg-success border border-dark">
+				<h3>col-md-3</h3>
+				<p>col-md-3</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container text-white">
+		<div class="text-center text-white m-5">
+			<h2 class="h5 text-secondary">Grid System - Sizing</h2>
+			<h1 id="grid_system">브라우저 사이즈에 따라 다른 설정</h1>
+			<p class="col-md-7 m-auto">
+				Bootstrap은그리드시스템은 브라우저의 너비 사이즈에 따라 다른 설정을 할 수 있습니다.</p>
+		</div>
+		<div class="row">
+			<div class="col-6 bg-primary border border-dark">
+				<h1>col-6 (모든 환경)</h1>
+				<p>col-6 (모든 환경)</p>
+			</div>
+			<div class="col-6 bg-primary border border-dark">
+				<h1>col-6 (모든 환경)</h1>
+				<p>col-6 (모든 환경)</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 bg-info border border-dark">
+				<h1>col-sm-6 (576px이상)</h1>
+				<p>col-sm-6</p>
+			</div>
+			<div class="col-sm-6 bg-info border border-dark">
+				<h1>col-sm-6 (576px이상)</h1>
+				<p>col-sm-6</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 bg-success border border-dark">
+				<h1>col-md-6 (767px이상)</h1>
+				<p>col-md-6</p>
+			</div>
+			<div class="col-md-6 bg-success border border-dark">
+				<h1>col-md-6 (767px이상)</h1>
+				<p>col-md-6</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 bg-warning border border-dark">
+				<h1>col-lg-6 (992px이상)</h1>
+				<p>col-lg-6 </p>
+			</div>
+			<div class="col-lg-6 bg-warning border border-dark">
+				<h1>col-lg-6 (992px이상)</h1>
+				<p>col-lg-6</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-6 bg-danger border border-light border border-dark">
+				<h1>col-xl-6 (1200px이상)</h1>
+				<p>col-xl-6</p>
+			</div>
+			<div class="col-xl-6 bg-danger  border border-dark">
+				<h1>col-xl-6 (1200px이상)</h1>
+				<p>col-xl-6</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-2 col-md-4 col-6 bg-primary border border-light border border-dark">
+				<h1>응용</h1>
+			</div>
+			<div class="col-xl-2 col-md-4 col-6  bg-primary  border border-dark">
+				<h1>응용</h1>
+			</div>
+			<div class="col-xl-2 col-md-4 col-6 bg-primary border border-light border border-dark">
+				<h1>응용</h1>
+			</div>
+			<div class="col-xl-2 col-md-4 col-6 bg-primary  border border-dark">
+				<h1>응용</h1>
+			</div>
+			<div class="col-xl-2 col-md-4 col-6 bg-primary border border-light border border-dark">
+				<h1>응용</h1>
+			</div>
+			<div class="col-xl-2 col-md-4 col-6 bg-primary  border border-dark">
+				<h1>응용</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 생략 -->
+<!-- Row를 사용하는 이유? -->
+<!-- container에는 좌우 여백 15px의 padding이 들어가 있다. -->
+<!-- 1. padding을 제거하여 꽉차게 만든다. -->
+<!-- 2. display: flex 속성을 이용하여 -->
+<!-- flex-wrap: wrap; -->
+
+<!-- <h1 class="separator">Row</h1>
+
+<div class="container bg-danger">
+	<div class="row bg-primary">
+		<h2 class="col-md-6 bg-success">row요소 사용</h2>
+		<h2 class="col-md-6  bg-success">row요소 사용</h2>
+	</div>
+</div>
+<div class="container bg-danger">
+	<div class="blue">
+		<h2 class="col-md-6  bg-success">row요소 미사용</h2>
+		<h2 class="col-md-6  bg-success">row요소 미사용</h2>
+	</div>
+</div>
+
+<div class="container-fluid bg-dark py-5 text-white text-center">
+	<div class="container">
+		<h3>
+			Get started for free — join the millions of developers already using GitHub to share their code, work together, and
+			build amazing things.
+		</h3>
+
+	</div>
+</div> -->
+
+<!--************ table ************-->
+<!--************ table ************-->
+<!--************ table ************-->
+<!-- table 표, 목록 // 특히 게시판을 만들때 유용하게 사용 -->
+<!-- 클래스 속성 + 세부 속성, 각각 표현하는 css가 다르다.-->
+<!-- => 고로 모두 명시해줘야한다. -->
+<!-- table-bordered, table-hover -->
+<div class="py-5">
+	<div class="container">
+		<div class="text-center text-dark m-3">
+			<h2 class="h5 text-secondary">Table</h2>
+			<h1 class="text-dark" id="grid_system">테이블</h1>
+			<p class="col-md-7 m-auto">
+				Bootstrap은 심플하고 미려한 Table 디자인을 제공합니다. <br>
+				기본적인 한국형 게시판을 꾸밀 수 있습니다.
+			</p>
+		</div>
+		<!-- 과거 테이블 -->
+		<table>
+			<!-- table Head: 컬럼명 -->
+			<thead>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>이메일</th>
+			</thead>
+	
+			<!-- table Body: 테이블 본 컨텐츠 -->
+			<tbody>
+	
+				<!-- table Row: 하나의 Row를 나타냄 -->
+				<tr>
+					<!-- table Data -->
+					<td>박성용</td>
+					<td>01043330000</td>
+					<td>skyshop5210@gmail.com</td>
+				</tr>
+				<tr>
+					<td>김철수</td>
+					<td>01012345678</td>
+					<td>cheol@gmail.com</td>
+				</tr>
+				<tr>
+					<td>김영희</td>
+					<td>01012343338</td>
+					<td>kyh123@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<h1>table</h1>
+		<table class="table">
+			<!-- 컬럼명 -->
+			<thead>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>이메일</th>
+			</thead>
+			<!-- table Body: 테이블 본 컨텐츠 -->
+			<tbody>
+				<!-- table Row: 하나의 Row를 나타냄 -->
+				<tr>
+					<!-- table Data -->
+					<td>이순신</td>
+					<td>01033441234</td>
+					<td>sky1243@naver.com</td>
+				</tr>
+				<tr>
+					<td>김철수</td>
+					<td>01012345678</td>
+					<td>cheol@gmail.com</td>
+				</tr>
+				<tr>
+					<td>김영희</td>
+					<td>01012343338</td>
+					<td>kyh123@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<!-- 행을 구별하여 직관적으로 보기 쉽게한다. -->
+		<h1>table table-striped</h1>
+		<table class="table table-striped">
+			<thead>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>이메일</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>박성용</td>
+					<td>01043330000</td>
+					<td>skyshop5210@gmail.com</td>
+				</tr>
+				<tr>
+					<td>김철수</td>
+					<td>01012345678</td>
+					<td>cheol@gmail.com</td>
+				</tr>
+				<tr>
+					<td>김영희</td>
+					<td>01012343338</td>
+					<td>kyh123@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	
+		<!-- hover 즉 마우스 오버를 하면 현재 오버된 row를 강조표시한다.
+					UX, 즉 사용자 편의를 생각한 UI이다.-->
+		<h1>table table-hover</h1>
+		<table class="table table-hover text-center text-dark">
+			<thead class="bg-light">
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>작성일</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3</td>
+					<td class="text-left"><a class="text-dark" href="">table 요소에 대해 알아봅시다.</a></td>
+					<td>부트운영자</td>
+					<td>2019-06-23</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td class="text-left"><a class="text-dark" href="">공지사항을 읽어주시기 바랍니다.</a></td>
+					<td>부트운영자</td>
+					<td>2019-06-22</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td class="text-left"><a class="text-dark" href="">부트스트랩 게시판 오픈했습니다.</a></td>
+					<td>부트운영자</td>
+					<td>2019-06-22</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Card -->
+<!-- Card -->
+<!-- 
+	카드형 UI는 모바일과 데스크탑의 모든 환경에 최적화 된 UI 패턴입니다.
+	또한 디자인적으로도 심플하며 아름답기 때문에 최근 많은 웹사이트에서 사용되고 있습니다.
+	부트스트랩4 버전에서 부터 카드 요소가 추가되어 쉽게 구현할 수 있게 되었다.
+	playdata의 본 섹션도 카드 UI 방식으로 채용하였다.
+-->
+<div class="py-5">
+	<div class="container">
+		<div class="text-center text-dark m-3">
+			<h2 class="h5 text-secondary">Card</h2>
+			<h1 class="text-dark" id="grid_system">카드 형식의 레이아웃</h1>
+			<p class="col-md-7 m-auto">
+				Bootstrap은 정보를 효과적으로 보여줄 수 있는 Card UI를 제공합니다.</p>
+		</div>
+
+		<div class="card-deck">
+
+			<div class="card">
+				<img class="card-img-top" src="img/lion.jpg" alt="left">
+				<div class="card-body">
+					<h3 class="card-title">사자</h3>
+					<p class="card-text">용감한 사자씨는 데이터 전처리와 <br>
+						개발 환경설정을 맡았습니다.
+					</p>
+				</div>
+				<div class="card-footer bg-transparent">
+					<a href="#" class="btn btn-secondary btn-block">포트폴리오 보기</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<img class="card-img-top" src="img/cat.jpg" alt="right">
+				<div class="card-body">
+					<h3 class="card-title">고양이</h3>
+					<p class="card-text">고양이씨는 Database 관리와<br>
+						Backend 개발을 수행했습니다.
+					</p>
+				</div>
+				<div class="card-footer bg-transparent">
+					<a href="#" class="btn btn-secondary btn-block">포트폴리오 보기</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<img class="card-img-top" src="img/giraffe.jpg" alt="right">
+				<div class="card-body">
+					<h3 class="card-title">기린</h3>
+					<p class="card-text">기린씨는 Fronend 개발과<br>
+						저희 팀의 평균키 상승을 맡았습니다.
+					</p>
+				</div>
+				<div class="card-footer bg-transparent">
+					<a href="#" class="btn btn-secondary btn-block">포트폴리오 보기</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!--****** Carousel ******-->
+<!--****** Carousel ******-->
+<!-- Carousel:  회전목마, 컨베이어벨트 -->
+<div class="py-5">
+	<div class="text-center text-dark m-3">
+		<h2 class="h5 text-secondary">Carousel</h2>
+		<h1 class="text-dark" id="grid_system">슬라이드 쇼</h1>
+		<p class="col-md-7 m-auto">
+			이미지 또는 텍스트 슬라이드를 순환하기 위한 슬라이드 쇼 구성 요소입니다.</p>
+	</div>
+	<!-- data-ride:		carousel의 동작 관여 -->
+	<!-- data-target:	id 타게팅. 어떤 캐러셀의 요소인지 나타냄 -->
+	<!-- class="carousel-indicators": 캐러셀 하단의 indicator -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	
+		<!-- Wrapper for slides -->
+		<!-- 출력할 요소들을 넣어줍니다. -->
+		<!-- carousel-inner: carousel의 실제 contents -->
+		<!-- 레이아웃 틀어짐을 막기위해 동일한 사진크기를 권장 -->
+		<!--********** 1. Carousel-inner **********-->
+		<div class="carousel-inner">
+		
+			<div class="carousel-item active">
+				<img src="img/carousel1.png" class="w-100" alt="cat">
+				<div class="carousel-caption">
+					<h1>반응형 Web Design</h1>
+					<p>해상도의 제약을 받지 않고 가변적으로 변하는 웹페이지
+					단 한번의 개발로 모바일, PC 모든 환경 사이트를 구축
+					</p>
+				</div>
+			</div>
+		
+			<div class="carousel-item">
+				<img src="img/carousel2.png" class="w-100" alt="dog">
+				<div class="carousel-caption">
+					<h1>쉬운 코딩</h1>
+					<p>오직 html태그와 class 선택자를 이용하여 개발 가능</p>
+				</div>
+			</div>
+		
+			<div class="carousel-item">
+				<img src="img/carousel3.png" class="w-100" alt="dog_cat">
+				<div class="carousel-caption">
+					<h1>쉽고 강력한 그리드 시스템</h1>
+					<p>브라우저의 크기에 따라 유동적으로 재배치
+					레이아웃 설정을 개발자가 손쉽게 설정</p>
+				</div>
+			</div>
+		
+		</div>
+	
+		<!--********** 2. 좌우 컨트롤 버튼 **********-->
+		<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	
+		<!-- Carousel 하단에 위치 // 누르면 해당 카드로 넘어감-->
+		<!--********** 3. Indicator **********-->
+		<ul class="carousel-indicators">
+			<!-- TIP: 선택자 // 0번, 1번, 2번 요소 -->
+			<!-- div#id 안에 있는 carousel-inner 요소 -->
+			<!-- data-slide-to:     해당 Indicator 클릭 시 몇 번째 슬라이드로 넘어갈지 표시
+						.active":          페이지 시작 시 Indicator의 초기값-->
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ul>
+	
+	</div>
+</div>
+
+
+</main>
+
+
+<footer>
+	<div class="pt-3">
+		<div class="container">
+			<div class="row text-secondary">
+				<div class="col-lg-3 mb-5">
+					<img src="img/logo.png" alt="Bootstrap" width="60" >
+				</div>
+				<div class="col-lg-9 row">
+					<div class="col-6 col-md-3  ml-lg-auto">
+						<h2 class="h5">Product</h2>
+						<!-- list-unstyled -->
+						<ul class="list-unstyled">
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<h2 class="h5">Product</h2>
+						<ul class="list-unstyled">
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<h2 class="h5">Product</h2>
+						<ul class="list-unstyled">
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+							<li><a class="text-secondary" href="">Features</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 최하단 섹션 -->
+		<div class="bg-light py-3">
+			<div class="container ">
+				<div class="row flex-row-reverse">
+					<ul class="col-md-6 d-flex list-unstyled m-lg-0 mb-1 h5">
+						<li class="mr-3  ml-md-auto"><a href="#" class="text-secondary" href=""><i class="fab fa-twitter"></i></a></li>
+						<li class="mr-3"><a class="text-secondary" href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li class="mr-3"><a class="text-secondary" href=""><i class="fab fa-youtube"></i></a></li>
+						<li class="mr-3"><a class="text-secondary" href=""><i class="fab fa-github"></i></li>
+					</ul>
+					<ul class="col-md-6 d-flex list-unstyled m-0 ">
+						<li class="mr-3">© 2019 PSY</li>
+						<li class="mr-3"><a class="text-secondary" href="">Terms</a></li>
+						<li class="mr-3"><a class="text-secondary" href="">Privacy</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,4 +1,28 @@
-svg {
-    fill: #007bff;
-    width: 5rem;
+body {
+    word-break: keep-all
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+.noto {
+    font-family: 'Noto Sans Korean', sans-serif;
+}
+
+.bg-black {
+    background-color: #20242a;
+}
+
+footer {
+    color: #20242a;
+}
+
+.jumbotron {
+    background: url(../img/carousel1.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* background-size: contain; */
 }
